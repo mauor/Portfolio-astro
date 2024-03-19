@@ -1,0 +1,27 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+    {
+        date: "Agosto 2022 - Junio 2023",
+        title: "Desarrollador Jr  − Bytack Systems",
+        description:
+        `Desarrollo de aplicaciones web utilizando patrones como el Modelo-Vista-Controlador (MVC) asi como la creación de API's Rest. Uso de tecnologías variadas como NestJs, Express, Angular, Handlebars, MySQL y MariaDB para crear soluciones robustas y escalables. `,
+    },
+    {
+        date: "Mayo 2020 - Agosto 2020 ",
+        title: "Desarrollador web - Lean Smart Manufacturing",
+        description: "Desarrolo de landing page para la empresa Lean Smart Mnufacturing utlizando HTML, CSS, JS y PHP.",
+        link: "http://leansmartmanufacturing.com/" 
+    }
+]
+---
+
+<ol >
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="border-l-2 border-indigo-600">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>

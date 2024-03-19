@@ -1,0 +1,93 @@
+---
+import Badge from '../components/Badge.astro';
+import GitHub from '../Icons/GitHub.astro';
+import Code from '../Icons/Code.astro';
+import LinkedIn from '../Icons/LinkedIn.astro';
+import Mail from '../Icons/Mail.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Layout from '../layouts/Layout.astro';
+import BriefCase from '../Icons/BriefCase.astro';
+import Experience from '../components/Experience.astro';
+import Link from '../Icons/Link.astro';
+import Project from '../components/Project.astro';
+import UserQuestion from '../Icons/UserQuestion.astro';
+import About from '../components/About.astro';
+---
+
+<Layout 
+	title="Portafolio de Mauricio - Desarrollador fullstack con 1 año de expericencia" 
+	description=""
+>
+	
+</Layout>
+<main class="px-4">
+	<SectionContainer>
+		<img
+			class="rounded-full size-12 mb-4"
+			src="/foto.webp"
+			alt="Mauricio Orozco Ponce"
+		/>
+		<h1 class="text-gray-900 dark:text-indigo-50 text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-2 lg:pb-4 lg:pt-9">
+            Mauricio Orozco Ponce
+			<!-- <a
+				href="https://www.linkedin.com/in/mauor/"
+				target="_blank"
+				rel="noopener"
+				class="flex justify-center items-center"
+                >
+                <Badge>Disponible para trabajar</Badge>
+			</a> -->
+		</h1>
+        <h5 class="xt-gray-900 dark:text-indigo-200 text-1xl md:text-2xl lg:text-3xl font-bold">
+            Fullstack Developer
+        </h5>
+
+		<p class="text-base text-balance max-w-[700px] text-black dark:text-indigo-200">
+			Desarrollador full-stack con enfoque en backend y más de un año de experiencia. Especializado en NestJS, Angular y MySQL para crear soluciones sólidas y escalables.
+		</p>
+
+		<nav class="flex gap-3 mt-6 flex-wrap">
+            <SocialPill href="https://github.com/mauor">
+                <GitHub class="size-5 md:size-6" />
+                GitHub
+            </SocialPill>
+			<SocialPill href="https://linkedin.com/in/mauor">
+				<LinkedIn class="size-5 md:size-6" />
+				LinkedIn
+			</SocialPill>
+			<SocialPill href="mailto:mauorozcoo@gmail.com">
+				<Mail class="size-5 md:size-6" />
+				mauorozcoo@gmail.com
+			</SocialPill>
+            <SocialPill href="/cv.pdf" download="CV_Orozco_Ponce_Mauricio">
+                <Link class="size-4 md:size-6" />
+                CV
+            </SocialPill>
+		</nav>
+    </SectionContainer>
+
+	<SectionContainer id="experiencia">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-indigo-200">
+			<BriefCase class="size-7" />
+			Experiencia laboral
+		</h2>
+		<Experience />
+	</SectionContainer>
+  
+	<SectionContainer id="proyectos">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-indigo-200">
+			<Code class="size-7" />
+			Proyectos
+		</h2>
+		<Project />
+	</SectionContainer>
+    <SectionContainer id="sobre-mi">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-indigo-200">
+			<UserQuestion class="size-7" />
+			Sobre mí
+		</h2>
+        <About />
+	</SectionContainer>
+</main>
+

@@ -1,0 +1,12 @@
+---
+const { href } = Astro.props;
+---
+<a 
+    href={ href }  target="_blank"
+    class="inline-flex px-4 py-1.5 bg-indigo-400 text-white font-medium text-xs uppercase rounded shadow-md hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-lg transition duration-150 ease-in-out" 
+    aria-hidden="true"
+    rel="noopener noreferrer"  
+    data-mdb-ripple="true"
+>
+    <slot />
+</a>
